@@ -1,52 +1,52 @@
-# Mon Portfolio
+# My Portfolio
 
-Un portfolio simple composé de trois fichiers (HTML, CSS, JavaScript) et d'un dossier d'images.
+A simple portfolio made of three files (HTML, CSS, JavaScript) and an images folder.
 
 ## Structure
 
 ```
 portfolio/
-├── index.html      → page principale (structure du contenu)
-├── style.css       → feuille de style (apparence et responsive)
-├── script.js       → interactions (menu mobile, projets, formulaire)
-├── images/         → placez ici vos images (photos, aperçus de projets)
-└── README.md       → ce fichier
+├── index.html      → main page (content structure)
+├── style.css       → stylesheet (appearance and responsiveness)
+├── script.js       → interactions (mobile menu, projects, form)
+├── images/         → put your images here (photos, project previews)
+└── README.md       → this file
 ```
 
-## Comment l'utiliser
+## How to use it
 
-1. **Personnaliser le contenu**
-   - Remplacez les textes entre crochets `[Votre Nom]` dans `index.html`.
-   - Ajoutez vos projets dans le tableau `projets` de `script.js`.
+1. **Customize the content**
+   - Replace the `[Your Name]` placeholders in `index.html`.
+   - Add your projects to the `projects` array in `script.js`.
 
-2. **Ajouter des images**
-   - Déposez vos images dans le dossier `images/`.
-   - Mettez à jour les chemins dans `script.js`
-     (exemple : `images/projet-site-vitrine.jpg`).
-   - Le héros n'utilise pas d'image : sa couleur vient du CSS.
+2. **Add images**
+   - Drop your images into the `images/` folder.
+   - Update the paths in `script.js`
+     (example: `images/project-showcase.jpg`).
+   - The hero does not use an image: its color comes from the CSS.
 
-3. **Ouvrir le site**
-   - Ouvrez simplement `index.html` dans un navigateur.
-   - Aucun serveur ni dépendance n'est nécessaire.
+3. **Open the site**
+   - Simply open `index.html` in a browser.
+   - No server or dependencies are required.
 
-## Fonctionnalités
+## Features
 
-- Navigation fluide et menu responsive (mobile / tablette / bureau)
-- Grille de projets générée dynamiquement par `script.js`
-- Formulaire de contact de démonstration (les messages ne sont pas réellement envoyés)
-- Année automatique dans le pied de page
+- Smooth navigation and a responsive menu (mobile / tablet / desktop)
+- Project grid generated dynamically by `script.js`
+- Demo contact form (messages are not actually sent)
+- Automatic year in the footer
 
-## Personnalisation des couleurs
+## Customizing colors
 
-Toutes les couleurs sont définies dans les variables CSS en haut de `style.css` :
+All colors are defined in the CSS variables at the top of `style.css`:
 
 ```css
 :root {
-    --couleur-principale: #2563eb;
-    --couleur-secondaire: #1e293b;
-    --fond: #f8fafc;
-    --texte: #334155;
+    --primary-color: #2563eb;
+    --secondary-color: #1e293b;
+    --background: #f8fafc;
+    --text: #334155;
 }
 ```
 
-Modifiez ces valeurs pour changer tout le thème en une fois.
+Change these values to update the whole theme at once.
