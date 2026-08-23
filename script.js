@@ -64,7 +64,7 @@ displayProjects();
 const form = document.getElementById('contact-form');
 const confirmation = document.getElementById('confirmation-message');
 
-if (form) {
+if (form && confirmation) {
     form.addEventListener('submit', (event) => {
         event.preventDefault();
         form.reset();
@@ -76,4 +76,7 @@ if (form) {
 }
 
 /* ===== Year in the footer ===== */
-document.getElementById('year').textContent = new Date().getFullYear();
+const yearElement = document.getElementById('year');
+if (yearElement) {
+    yearElement.textContent = new Date().getFullYear();
+}
