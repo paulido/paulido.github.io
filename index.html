@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio de [Votre Nom] — Développeur web. Projets, compétences et contact.">
+    <title>Mon Portfolio | [Votre Nom]</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Barre de navigation -->
+    <header class="navbar">
+        <div class="container">
+            <a href="#accueil" class="logo">Mon<span>Portfolio</span></a>
+            <nav id="menu">
+                <a href="#accueil">Accueil</a>
+                <a href="#apropos">À propos</a>
+                <a href="#projets">Projets</a>
+                <a href="#contact">Contact</a>
+            </nav>
+            <button id="menu-toggle" aria-label="Ouvrir le menu" aria-expanded="false">
+                ☰
+            </button>
+        </div>
+    </header>
+
+    <!-- Section Accueil -->
+    <section id="accueil" class="hero">
+        <div class="container">
+            <h1>Bonjour, je suis <span>[Votre Nom]</span></h1>
+            <p>Développeur web passionné, je crée des sites et des applications simples, modernes et efficaces.</p>
+            <a href="#projets" class="btn">Voir mes projets</a>
+        </div>
+    </section>
+
+    <!-- Section À propos -->
+    <section id="apropos" class="section">
+        <div class="container">
+            <h2>À propos de moi</h2>
+            <p>
+                Je suis développeur web avec une expérience dans la création de sites vitrines,
+                de portfolios et d'outils web. J'aime les interfaces claires, le code propre
+                et les projets qui résolvent de vrais problèmes.
+            </p>
+        </div>
+    </section>
+
+    <!-- Section Projets -->
+    <section id="projets" class="section">
+        <div class="container">
+            <h2>Mes projets</h2>
+            <div class="grid" id="liste-projets">
+                <!-- Les projets sont ajoutés ici dynamiquement par script.js -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Contact -->
+    <section id="contact" class="section">
+        <div class="container">
+            <h2>Contact</h2>
+            <p>Une question, un projet ? Écrivez-moi !</p>
+            <form id="form-contact">
+                <label for="nom">Nom</label>
+                <input type="text" id="nom" name="nom" placeholder="Votre nom" required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="vous@exemple.fr" required>
+
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" placeholder="Votre message..." required></textarea>
+
+                <button type="submit" class="btn">Envoyer</button>
+                <p id="message-confirmation" class="confirmation" hidden>Merci ! Votre message a bien été envoyé (démo).</p>
+            </form>
+        </div>
+    </section>
+
+    <!-- Pied de page -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; <span id="annee"></span> [Votre Nom] — Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
