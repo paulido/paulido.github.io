@@ -1,86 +1,86 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfolio de [Votre Nom] — Développeur web. Projets, compétences et contact.">
-    <title>Mon Portfolio | [Votre Nom]</title>
+    <meta name="description" content="Portfolio of [Your Name] — Web developer. Projects, skills and contact.">
+    <title>My Portfolio | [Your Name]</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Barre de navigation -->
+    <!-- Navigation bar -->
     <header class="navbar">
         <div class="container">
-            <a href="#accueil" class="logo">Mon<span>Portfolio</span></a>
+            <a href="#home" class="logo">My<span>Portfolio</span></a>
             <nav id="menu">
-                <a href="#accueil">Accueil</a>
-                <a href="#apropos">À propos</a>
-                <a href="#projets">Projets</a>
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#projects">Projects</a>
                 <a href="#contact">Contact</a>
             </nav>
-            <button id="menu-toggle" aria-label="Ouvrir le menu" aria-expanded="false">
+            <button id="menu-toggle" aria-label="Open the menu" aria-expanded="false">
                 ☰
             </button>
         </div>
     </header>
 
-    <!-- Section Accueil -->
-    <section id="accueil" class="hero">
+    <!-- Hero section -->
+    <section id="home" class="hero">
         <div class="container">
-            <h1>Bonjour, je suis <span>IDO PAUL</span></h1>
-            <p>Développeur web passionné, je crée des sites et des applications simples, modernes et efficaces.</p>
-            <a href="#projets" class="btn">Voir mes projets</a>
+            <h1>Hello, I'm <span>IDO PAUL</span></h1>
+            <p>Passionate about web development, I build simple, modern and effective websites and applications.</p>
+            <a href="#projects" class="btn">See my projects</a>
         </div>
     </section>
 
-    <!-- Section À propos -->
-    <section id="apropos" class="section">
+    <!-- About section -->
+    <section id="about" class="section">
         <div class="container">
-            <h2>À propos de moi</h2>
+            <h2>About me</h2>
             <p>
-                Je suis développeur web avec une expérience dans la création de sites vitrines,
-                de portfolios et d'outils web. J'aime les interfaces claires, le code propre
-                et les projets qui résolvent de vrais problèmes.
+                I am a web developer with experience in building showcase websites, portfolios
+                and web tools. I enjoy clean interfaces, clean code and projects that solve
+                real problems.
             </p>
         </div>
     </section>
 
-    <!-- Section Projets -->
-    <section id="projets" class="section">
+    <!-- Projects section -->
+    <section id="projects" class="section">
         <div class="container">
-            <h2>Mes projets</h2>
-            <div class="grid" id="liste-projets">
-                <!-- Les projets sont ajoutés ici dynamiquement par script.js -->
+            <h2>My projects</h2>
+            <div class="grid" id="project-list">
+                <!-- Projects are added here dynamically by script.js -->
             </div>
         </div>
     </section>
 
-    <!-- Section Contact -->
+    <!-- Contact section -->
     <section id="contact" class="section">
         <div class="container">
             <h2>Contact</h2>
-            <p>Une question, un projet ? Écrivez-moi !</p>
-            <form id="form-contact">
-                <label for="nom">Nom</label>
-                <input type="text" id="nom" name="nom" placeholder="Votre nom" required>
+            <p>A question or a project? Send me a message!</p>
+            <form id="contact-form">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Your name" required>
 
                 <label for="email">Email</label>
-                <input type="email" id="email" name="email" placeholder="vous@exemple.fr" required>
+                <input type="email" id="email" name="email" placeholder="you@example.com" required>
 
                 <label for="message">Message</label>
-                <textarea id="message" name="message" rows="5" placeholder="Votre message..." required></textarea>
+                <textarea id="message" name="message" rows="5" placeholder="Your message..." required></textarea>
 
-                <button type="submit" class="btn">Envoyer</button>
-                <p id="message-confirmation" class="confirmation" hidden>Merci ! Votre message a bien été envoyé (démo).</p>
+                <button type="submit" class="btn">Send</button>
+                <p id="confirmation-message" class="confirmation" hidden>Thank you! Your message has been sent (demo).</p>
             </form>
         </div>
     </section>
 
-    <!-- Pied de page -->
+    <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; <span id="annee"></span> [Votre Nom] — Tous droits réservés.</p>
+            <p>&copy; <span id="year"></span> [Your Name] — All rights reserved.</p>
         </div>
     </footer>
 

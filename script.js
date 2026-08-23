@@ -1,73 +1,73 @@
-/* ===== Menu mobile ===== */
-const boutonMenu = document.getElementById('menu-toggle');
+/* ===== Mobile menu ===== */
+const menuButton = document.getElementById('menu-toggle');
 const menu = document.getElementById('menu');
 
-if (boutonMenu && menu) {
-    boutonMenu.addEventListener('click', () => {
-        const ouvert = menu.classList.toggle('ouvert');
-        boutonMenu.setAttribute('aria-expanded', ouvert);
-        boutonMenu.textContent = ouvert ? '✕' : '☰';
+if (menuButton && menu) {
+    menuButton.addEventListener('click', () => {
+        const isOpen = menu.classList.toggle('open');
+        menuButton.setAttribute('aria-expanded', isOpen);
+        menuButton.textContent = isOpen ? '\u2715' : '\u2630';
     });
 
-    // Fermer le menu après un clic sur un lien
-    menu.querySelectorAll('a').forEach((lien) => {
-        lien.addEventListener('click', () => {
-            menu.classList.remove('ouvert');
-            boutonMenu.setAttribute('aria-expanded', 'false');
-            boutonMenu.textContent = '☰';
+    // Close the menu after clicking a link
+    menu.querySelectorAll('a').forEach((link) => {
+        link.addEventListener('click', () => {
+            menu.classList.remove('open');
+            menuButton.setAttribute('aria-expanded', 'false');
+            menuButton.textContent = '\u2630';
         });
     });
 }
 
-/* ===== Liste des projets ===== */
-const projets = [
+/* ===== Project list ===== */
+const projects = [
     {
-        titre: 'Site vitrine',
-        description: 'Un site vitrine moderne pour une petite entreprise (HTML, CSS).',
-        image: 'images/projet-site-vitrine.jpg',
-        lien: '#'
+        title: 'Showcase website',
+        description: 'A modern showcase website for a small business (HTML, CSS).',
+        image: 'images/project-showcase.jpg',
+        link: '#'
     },
     {
-        titre: 'Application de tâches',
-        description: 'Une to-do list interactive avec stockage local (JavaScript).',
-        image: 'images/projet-todo.jpg',
-        lien: '#'
+        title: 'Task app',
+        description: 'An interactive to-do list with local storage (JavaScript).',
+        image: 'images/project-todo.jpg',
+        link: '#'
     },
     {
-        titre: 'Mini jeu web',
-        description: "Un petit jeu de devinettes jouable dans le navigateur.",
-        image: 'images/projet-jeu.jpg',
-        lien: '#'
+        title: 'Mini web game',
+        description: 'A small guessing game playable in the browser.',
+        image: 'images/project-game.jpg',
+        link: '#'
     }
 ];
 
-function afficherProjets() {
-    const liste = document.getElementById('liste-projets');
-    if (!liste) return;
+function displayProjects() {
+    const list = document.getElementById('project-list');
+    if (!list) return;
 
-    projets.forEach((projet) => {
-        const carte = document.createElement('article');
-        carte.className = 'carte-projet';
-        carte.innerHTML = `
-            <img src="${projet.image}" alt="Aperçu du projet : ${projet.titre}">
-            <h3>${projet.titre}</h3>
-            <p>${projet.description}</p>
-            <a href="${projet.lien}" target="_blank" rel="noopener">Voir le projet</a>
+    projects.forEach((project) => {
+        const card = document.createElement('article');
+        card.className = 'project-card';
+        card.innerHTML = `
+            <img src="${project.image}" alt="Preview of project: ${project.title}">
+            <h3>${project.title}</h3>
+            <p>${project.description}</p>
+            <a href="${project.link}" target="_blank" rel="noopener">View project</a>
         `;
-        liste.appendChild(carte);
+        list.appendChild(card);
     });
 }
 
-afficherProjets();
+displayProjects();
 
-/* ===== Formulaire de contact (démo) ===== */
-const formulaire = document.getElementById('form-contact');
-const confirmation = document.getElementById('message-confirmation');
+/* ===== Contact form (demo) ===== */
+const form = document.getElementById('contact-form');
+const confirmation = document.getElementById('confirmation-message');
 
-if (formulaire) {
-    formulaire.addEventListener('submit', (event) => {
+if (form) {
+    form.addEventListener('submit', (event) => {
         event.preventDefault();
-        formulaire.reset();
+        form.reset();
         confirmation.hidden = false;
         setTimeout(() => {
             confirmation.hidden = true;
@@ -75,5 +75,5 @@ if (formulaire) {
     });
 }
 
-/* ===== Année dans le pied de page ===== */
-document.getElementById('annee').textContent = new Date().getFullYear();
+/* ===== Year in the footer ===== */
+document.getElementById('year').textContent = new Date().getFullYear();
