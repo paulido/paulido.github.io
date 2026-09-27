@@ -68,56 +68,19 @@
       <section id="home" class="py-5">
         <div class="container py-lg-5">
           <div class="row align-items-center g-5">
-            <div class="col-lg-7">
-              <span class="badge rounded-pill bg-primary bg-opacity-10 text-primary px-3 py-2 mb-4">
-                Software Engineering · Cybersecurity · AI
-              </span>
-              <h1 class="display-4 fw-bold mb-3">Paul IDO</h1>
-              <p class="fs-4 text-secondary mb-4">
-                Software &amp; Cybersecurity Engineer building secure, maintainable
-                systems with Clean Architecture.
-              </p>
-              <p class="text-secondary mb-5">
-                Head of the Networks &amp; Systems department at the Ministry of
-                Commerce of Burkina Faso. I design web platforms, secure
-                infrastructures and explore how artificial intelligence can
-                strengthen security.
-              </p>
-              <div class="d-flex flex-wrap gap-3">
-                <a href="#contact" class="btn btn-primary btn-lg px-4">Get in touch</a>
-                <a
-                  href="https://github.com/paulido"
-                  class="btn btn-outline-secondary btn-lg px-4"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  GitHub
-                </a>
-                <a
-                  href="https://www.linkedin.com/in/paul-ido/"
-                  class="btn btn-outline-secondary btn-lg px-4"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  LinkedIn
-                </a>
-              </div>
+            <div class="col-lg-7" id="hero">
+              <noscript>
+                <h1 class="display-4 fw-bold mb-3">Paul IDO</h1>
+                <p class="text-secondary">
+                  This site needs JavaScript. Contact:
+                  <a href="mailto:paulido92@gmail.com">paulido92@gmail.com</a>
+                </p>
+              </noscript>
             </div>
             <div class="col-lg-5">
               <div class="p-4 p-lg-5 bg-light border rounded-3">
                 <h2 class="h6 text-uppercase text-secondary mb-4">At a glance</h2>
-                <dl class="row mb-0 gy-3">
-                  <dt class="col-5 fw-semibold">Role</dt>
-                  <dd class="col-7 text-secondary mb-0">Head of Networks &amp; Systems</dd>
-                  <dt class="col-5 fw-semibold">Degree</dt>
-                  <dd class="col-7 text-secondary mb-0">Master in Cybersecurity</dd>
-                  <dt class="col-5 fw-semibold">Research</dt>
-                  <dd class="col-7 text-secondary mb-0">AI for Android malware detection</dd>
-                  <dt class="col-5 fw-semibold">Approach</dt>
-                  <dd class="col-7 text-secondary mb-0">Clean Architecture, security by design</dd>
-                  <dt class="col-5 fw-semibold">Location</dt>
-                  <dd class="col-7 text-secondary mb-0">Ouagadougou, Burkina Faso</dd>
-                </dl>
+                <dl class="row mb-0 gy-3" id="glance-list"></dl>
               </div>
             </div>
           </div>
@@ -128,7 +91,7 @@
         <div class="container py-lg-4">
           <div class="mb-5">
             <h2 class="fw-bold mb-2">Expertise</h2>
-            <p class="text-secondary mb-0">Three disciplines, one goal: software that is correct, secure and built to last.</p>
+            <p class="text-secondary mb-0" id="expertise-intro"></p>
           </div>
           <div class="row g-4" id="focus-list"></div>
         </div>
@@ -138,9 +101,9 @@
         <div class="container py-lg-4">
           <div class="mb-5">
             <h2 class="fw-bold mb-2">Research</h2>
-            <p class="text-secondary mb-0">Where cybersecurity meets data science.</p>
+            <p class="text-secondary mb-0" id="research-intro"></p>
           </div>
-          <div id="research-card"></div>
+          <div class="d-grid gap-4" id="research-list"></div>
         </div>
       </section>
 
@@ -178,29 +141,8 @@
           <div class="row justify-content-center text-center">
             <div class="col-lg-7">
               <h2 class="fw-bold mb-3">Let's work together</h2>
-              <p class="text-secondary mb-5">
-                A project, a security audit or a role in software engineering,
-                cybersecurity or AI? I would be glad to talk about it.
-              </p>
-              <div class="d-flex flex-wrap justify-content-center gap-3">
-                <a href="mailto:paulido92@gmail.com" class="btn btn-primary btn-lg px-4">paulido92@gmail.com</a>
-                <a
-                  href="https://www.linkedin.com/in/paul-ido/"
-                  class="btn btn-outline-secondary btn-lg px-4"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  LinkedIn
-                </a>
-                <a
-                  href="https://github.com/paulido"
-                  class="btn btn-outline-secondary btn-lg px-4"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  GitHub
-                </a>
-              </div>
+              <p class="text-secondary mb-5" id="contact-intro"></p>
+              <div class="d-flex flex-wrap justify-content-center gap-3" id="contact-links"></div>
             </div>
           </div>
         </div>

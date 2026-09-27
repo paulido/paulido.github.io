@@ -1,0 +1,93 @@
+{
+  "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json",
+  "basics": {
+    "name": "Paul IDO",
+    "label": "Software & Cybersecurity Engineer",
+    "email": "paulido92@gmail.com",
+    "url": "https://paulido.github.io",
+    "summary": "Head of the Networks & Systems department at the Ministry of Commerce of Burkina Faso. I design web platforms, secure infrastructures and explore how artificial intelligence can strengthen security.",
+    "location": {
+      "city": "Ouagadougou",
+      "countryCode": "BF"
+    },
+    "profiles": [
+      {
+        "network": "GitHub",
+        "username": "paulido",
+        "url": "https://github.com/paulido"
+      },
+      {
+        "network": "LinkedIn",
+        "username": "paul-ido",
+        "url": "https://www.linkedin.com/in/paul-ido/"
+      }
+    ]
+  },
+  "work": [
+    {
+      "name": "Ministry of Commerce",
+      "position": "Head of Networks & Systems Department",
+      "startDate": "2023",
+      "summary": "Head of department since 2024.",
+      "highlights": [
+        "Administer the ministry systems and network infrastructure.",
+        "Deploy containerized applications with Docker.",
+        "Develop the eSIAO platform (Laravel, Angular).",
+        "Design an event management application.",
+        "Implement application audit and security modules."
+      ]
+    },
+    {
+      "name": "2MF Consulting",
+      "position": "Web Developer (Freelance)",
+      "startDate": "2022",
+      "endDate": "2025",
+      "highlights": [
+        "Built the ABNORM web portal (WordPress): content management and customization.",
+        "Developed CMS-based web platforms with interactive mapping.",
+        "Set up monitoring and evaluation systems (Google Sheets, web)."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "Joseph KI-ZERBO University",
+      "area": "Cybersecurity",
+      "studyType": "Master's degree",
+      "startDate": "2019",
+      "endDate": "2022"
+    },
+    {
+      "institution": "Joseph KI-ZERBO University",
+      "area": "Information Systems & Networks",
+      "studyType": "Bachelor's degree",
+      "startDate": "2014",
+      "endDate": "2017"
+    }
+  ],
+  "skills": [
+    { "name": "Backend", "keywords": ["Laravel", "PHP", "Python"] },
+    { "name": "Frontend", "keywords": ["Angular", "Vue.js", "JavaScript"] },
+    { "name": "Security", "keywords": ["OWASP ZAP", "Burp Suite", "Nmap"] },
+    { "name": "DevOps", "keywords": ["Docker", "Git"] },
+    { "name": "Systems", "keywords": ["Linux", "Networking"] },
+    { "name": "CMS", "keywords": ["WordPress (themes, plugins, administration)"] }
+  ],
+  "languages": [
+    { "language": "French", "fluency": "Fluent" },
+    { "language": "English", "fluency": "Professional" },
+    { "language": "Moore" },
+    { "language": "Dioula" },
+    { "language": "Gurunsi" }
+  ],
+  "projects": [
+    {
+      "name": "Android malware detection using artificial intelligence",
+      "type": "thesis",
+      "entity": "Master's thesis - Joseph KI-ZERBO University",
+      "description": "Design and evaluation of a deep learning model that classifies Android applications as benign or malicious, reaching 97% accuracy.",
+      "highlights": ["97% accuracy"],
+      "keywords": ["Deep Learning", "Android", "Malware Detection"]
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "hero": {
+    "eyebrow": "Software Engineering · Cybersecurity · AI",
+    "tagline": "Software & Cybersecurity Engineer building secure, maintainable systems with Clean Architecture."
+  },
+  "glance": [
+    { "label": "Role", "value": "Head of Networks & Systems" },
+    { "label": "Degree", "value": "Master in Cybersecurity" },
+    { "label": "Research", "value": "AI for Android malware detection" },
+    { "label": "Approach", "value": "Clean Architecture, security by design" },
+    { "label": "Location", "value": "Ouagadougou, Burkina Faso" }
+  ],
+  "intros": {
+    "expertise": "Three disciplines, one goal: software that is correct, secure and built to last.",
+    "research": "Where cybersecurity meets data science.",
+    "contact": "A project, a security audit or a role in software engineering, cybersecurity or AI? I would be glad to talk about it."
+  },
+  "focusAreas": [
+    {
+      "title": "Software Engineering",
+      "description": "Maintainable back-end and front-end applications built on Clean Architecture principles: clear boundaries, testable business rules and framework-independent core logic.",
+      "tags": ["Clean Architecture", "Laravel", "Angular", "Vue.js"]
+    },
+    {
+      "title": "Cybersecurity",
+      "description": "Application security audits, infrastructure hardening and security modules integrated from the design phase rather than added afterwards.",
+      "tags": ["OWASP", "Pentesting", "Audit", "Hardening"]
+    },
+    {
+      "title": "Data Science & AI",
+      "description": "Applying machine learning and deep learning to security problems, from feature extraction to model evaluation.",
+      "tags": ["Deep Learning", "Python", "Malware Detection"]
+    }
+  ]
+}
