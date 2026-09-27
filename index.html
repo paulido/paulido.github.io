@@ -1,90 +1,224 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfolio of [Your Name] — Web developer. Projects, skills and contact.">
-    <title>My Portfolio | [Your Name]</title>
-    <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20100%20100'%3E%3Ctext%20y='.9em'%20font-size='90'%3E🚀%3C/text%3E%3C/svg%3E">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'none'; script-src 'self' https://cdn.jsdelivr.net; style-src 'self' https://cdn.jsdelivr.net; img-src 'self' data:; font-src 'self'; connect-src 'self'; base-uri 'self'; form-action 'none'"
+    />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+    <meta
+      name="description"
+      content="Paul IDO - Software engineer and cybersecurity engineer based in Ouagadougou. Clean Architecture, application security and AI applied to Android malware detection."
+    />
+    <meta property="og:title" content="Paul IDO | Software & Cybersecurity Engineer" />
+    <meta
+      property="og:description"
+      content="Software engineering, cybersecurity and AI applied to security."
+    />
+    <meta property="og:type" content="website" />
+    <title>Paul IDO | Software & Cybersecurity Engineer</title>
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20100%20100'%3E%3Crect%20width='100'%20height='100'%20rx='20'%20fill='%23c1272d'/%3E%3Ctext%20x='50'%20y='66'%20font-family='Arial,sans-serif'%20font-size='46'%20font-weight='700'%20fill='white'%20text-anchor='middle'%3EPI%3C/text%3E%3C/svg%3E"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="assets/css/theme.css" />
+  </head>
+  <body class="bg-white text-body">
+    <a href="#main" class="visually-hidden-focusable position-absolute top-0 start-0 m-2 p-2 bg-white border rounded">
+      Skip to main content
+    </a>
 
-    <!-- Navigation bar -->
-    <header class="navbar">
-        <div class="container">
-            <a href="#home" class="logo">My<span>Portfolio</span></a>
-            <nav id="menu">
-                <a href="#home">Home</a>
-                <a href="#about">About</a>
-                <a href="#projects">Projects</a>
-                <a href="#contact">Contact</a>
-            </nav>
-            <button id="menu-toggle" aria-label="Open the menu" aria-expanded="false">
-                ☰
-            </button>
+    <header class="navbar navbar-expand-lg sticky-top bg-white border-bottom py-3">
+      <nav class="container" aria-label="Main navigation">
+        <a href="#home" class="navbar-brand fw-bold">
+          Paul <span class="text-primary">IDO</span>
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#menu"
+          aria-controls="menu"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="menu">
+          <ul class="navbar-nav ms-auto gap-lg-2">
+            <li class="nav-item"><a class="nav-link" href="#expertise">Expertise</a></li>
+            <li class="nav-item"><a class="nav-link" href="#research">Research</a></li>
+            <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+            <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+          </ul>
         </div>
+      </nav>
     </header>
 
-    <!-- Hero section -->
-    <section id="home" class="hero">
-        <div class="container">
-            <h1>Hello, I'm <span>IDO PAUL</span></h1>
-            <p>Passionate about web development, I build simple, modern and effective websites and applications.</p>
-            <a href="#projects" class="btn">See my projects</a>
-        </div>
-    </section>
-
-    <!-- About section -->
-    <section id="about" class="section">
-        <div class="container">
-            <h2>About me</h2>
-            <p>
-                I am a web developer with experience in building showcase websites, portfolios
-                and web tools. I enjoy clean interfaces, clean code and projects that solve
-                real problems.
-            </p>
-        </div>
-    </section>
-
-    <!-- Projects section -->
-    <section id="projects" class="section">
-        <div class="container">
-            <h2>My projects</h2>
-            <div class="grid" id="project-list">
-                <!-- Projects are added here dynamically by script.js -->
+    <main id="main">
+      <section id="home" class="py-5">
+        <div class="container py-lg-5">
+          <div class="row align-items-center g-5">
+            <div class="col-lg-7">
+              <span class="badge rounded-pill bg-primary bg-opacity-10 text-primary px-3 py-2 mb-4">
+                Software Engineering · Cybersecurity · AI
+              </span>
+              <h1 class="display-4 fw-bold mb-3">Paul IDO</h1>
+              <p class="fs-4 text-secondary mb-4">
+                Software &amp; Cybersecurity Engineer building secure, maintainable
+                systems with Clean Architecture.
+              </p>
+              <p class="text-secondary mb-5">
+                Head of the Networks &amp; Systems department at the Ministry of
+                Commerce of Burkina Faso. I design web platforms, secure
+                infrastructures and explore how artificial intelligence can
+                strengthen security.
+              </p>
+              <div class="d-flex flex-wrap gap-3">
+                <a href="#contact" class="btn btn-primary btn-lg px-4">Get in touch</a>
+                <a
+                  href="https://github.com/paulido"
+                  class="btn btn-outline-secondary btn-lg px-4"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  GitHub
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/paul-ido/"
+                  class="btn btn-outline-secondary btn-lg px-4"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  LinkedIn
+                </a>
+              </div>
             </div>
+            <div class="col-lg-5">
+              <div class="p-4 p-lg-5 bg-light border rounded-3">
+                <h2 class="h6 text-uppercase text-secondary mb-4">At a glance</h2>
+                <dl class="row mb-0 gy-3">
+                  <dt class="col-5 fw-semibold">Role</dt>
+                  <dd class="col-7 text-secondary mb-0">Head of Networks &amp; Systems</dd>
+                  <dt class="col-5 fw-semibold">Degree</dt>
+                  <dd class="col-7 text-secondary mb-0">Master in Cybersecurity</dd>
+                  <dt class="col-5 fw-semibold">Research</dt>
+                  <dd class="col-7 text-secondary mb-0">AI for Android malware detection</dd>
+                  <dt class="col-5 fw-semibold">Approach</dt>
+                  <dd class="col-7 text-secondary mb-0">Clean Architecture, security by design</dd>
+                  <dt class="col-5 fw-semibold">Location</dt>
+                  <dd class="col-7 text-secondary mb-0">Ouagadougou, Burkina Faso</dd>
+                </dl>
+              </div>
+            </div>
+          </div>
         </div>
-    </section>
+      </section>
 
-    <!-- Contact section -->
-    <section id="contact" class="section">
-        <div class="container">
-            <h2>Contact</h2>
-            <p>A question or a project? Send me a message!</p>
-            <form id="contact-form">
-                <label for="name">Name</label>
-                <input type="text" id="name" name="name" placeholder="Your name" required>
-
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" placeholder="you@example.com" required>
-
-                <label for="message">Message</label>
-                <textarea id="message" name="message" rows="5" placeholder="Your message..." required></textarea>
-
-                <button type="submit" class="btn">Send</button>
-                <p id="confirmation-message" class="confirmation" hidden>Thank you! Your message has been sent (demo).</p>
-            </form>
+      <section id="expertise" class="py-5 bg-light">
+        <div class="container py-lg-4">
+          <div class="mb-5">
+            <h2 class="fw-bold mb-2">Expertise</h2>
+            <p class="text-secondary mb-0">Three disciplines, one goal: software that is correct, secure and built to last.</p>
+          </div>
+          <div class="row g-4" id="focus-list"></div>
         </div>
-    </section>
+      </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; <span id="year"></span> [Your Name] — All rights reserved.</p>
+      <section id="research" class="py-5">
+        <div class="container py-lg-4">
+          <div class="mb-5">
+            <h2 class="fw-bold mb-2">Research</h2>
+            <p class="text-secondary mb-0">Where cybersecurity meets data science.</p>
+          </div>
+          <div id="research-card"></div>
         </div>
+      </section>
+
+      <section id="experience" class="py-5 bg-light">
+        <div class="container py-lg-4">
+          <h2 class="fw-bold mb-5">Experience</h2>
+          <ol class="list-unstyled mb-0" id="experience-list"></ol>
+        </div>
+      </section>
+
+      <section id="skills" class="py-5">
+        <div class="container py-lg-4">
+          <h2 class="fw-bold mb-5">Skills</h2>
+          <div class="row g-4" id="skill-list"></div>
+        </div>
+      </section>
+
+      <section id="education" class="py-5 bg-light">
+        <div class="container py-lg-4">
+          <div class="row g-5">
+            <div class="col-lg-7">
+              <h2 class="fw-bold mb-4">Education</h2>
+              <ul class="list-group list-group-flush bg-transparent" id="education-list"></ul>
+            </div>
+            <div class="col-lg-5">
+              <h2 class="fw-bold mb-4">Languages</h2>
+              <div class="d-flex flex-wrap gap-2" id="language-list"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="py-5">
+        <div class="container py-lg-5">
+          <div class="row justify-content-center text-center">
+            <div class="col-lg-7">
+              <h2 class="fw-bold mb-3">Let's work together</h2>
+              <p class="text-secondary mb-5">
+                A project, a security audit or a role in software engineering,
+                cybersecurity or AI? I would be glad to talk about it.
+              </p>
+              <div class="d-flex flex-wrap justify-content-center gap-3">
+                <a href="mailto:paulido92@gmail.com" class="btn btn-primary btn-lg px-4">paulido92@gmail.com</a>
+                <a
+                  href="https://www.linkedin.com/in/paul-ido/"
+                  class="btn btn-outline-secondary btn-lg px-4"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  LinkedIn
+                </a>
+                <a
+                  href="https://github.com/paulido"
+                  class="btn btn-outline-secondary btn-lg px-4"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  GitHub
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="py-4 border-top">
+      <div class="container d-flex flex-column flex-sm-row justify-content-between gap-2 small text-secondary">
+        <p class="mb-0">&copy; <span id="year"></span> Paul IDO</p>
+        <p class="mb-0">Ouagadougou, Burkina Faso</p>
+      </div>
     </footer>
 
-    <script src="script.js"></script>
-</body>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script type="module" src="src/main.js"></script>
+  </body>
 </html>

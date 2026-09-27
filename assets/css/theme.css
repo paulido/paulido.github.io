@@ -1,0 +1,59 @@
+/* Brand palette mapped onto Bootstrap variables so native utilities
+   (text-primary, bg-primary, bg-opacity-*, btn-primary...) use it. */
+:root {
+    --bs-primary: #c1272d;
+    --bs-primary-rgb: 193, 39, 45;
+    --bs-primary-text-emphasis: #4d1012;
+    --bs-link-color: #c1272d;
+    --bs-link-color-rgb: 193, 39, 45;
+    --bs-link-hover-color: #9a1f24;
+    --bs-link-hover-color-rgb: 154, 31, 36;
+    --bs-focus-ring-color: rgba(193, 39, 45, 0.25);
+    --pf-tertiary-rgb: 30, 122, 70;
+}
+
+.btn-primary {
+    --bs-btn-bg: #c1272d;
+    --bs-btn-border-color: #c1272d;
+    --bs-btn-hover-bg: #a42126;
+    --bs-btn-hover-border-color: #9a1f24;
+    --bs-btn-active-bg: #9a1f24;
+    --bs-btn-active-border-color: #911d22;
+    --bs-btn-disabled-bg: #c1272d;
+    --bs-btn-disabled-border-color: #c1272d;
+    --bs-btn-focus-shadow-rgb: 193, 39, 45;
+}
+
+.btn-outline-primary {
+    --bs-btn-color: #c1272d;
+    --bs-btn-border-color: #c1272d;
+    --bs-btn-hover-bg: #c1272d;
+    --bs-btn-hover-border-color: #c1272d;
+    --bs-btn-active-bg: #c1272d;
+    --bs-btn-active-border-color: #c1272d;
+    --bs-btn-focus-shadow-rgb: 193, 39, 45;
+}
+
+.btn:focus-visible,
+.nav-link:focus-visible {
+    border-color: rgba(193, 39, 45, 0.5);
+    box-shadow: 0 0 0 0.25rem var(--bs-focus-ring-color);
+}
+
+/* Bootstrap has no tertiary theme color: these mirror its native utilities,
+   including bg-opacity support. */
+.text-tertiary {
+    color: rgba(var(--pf-tertiary-rgb), var(--bs-text-opacity, 1)) !important;
+}
+
+.bg-tertiary {
+    background-color: rgba(var(--pf-tertiary-rgb), var(--bs-bg-opacity, 1)) !important;
+}
+
+.border-tertiary {
+    border-color: rgba(var(--pf-tertiary-rgb), var(--bs-border-opacity, 1)) !important;
+}
+
+html {
+    scroll-padding-top: 5rem;
+}

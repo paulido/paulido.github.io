@@ -1,52 +1,40 @@
-# My Portfolio
+# Paul IDO - Portfolio
 
-A simple portfolio made of three files (HTML, CSS, JavaScript) and an images folder.
+Personal portfolio of Paul IDO, software and cybersecurity engineer.
+Static site built with Bootstrap 5.3 and native ES modules. No build step, no dependencies to install.
 
-## Structure
+## Run locally
+
+ES modules are blocked on `file://`, so serve the folder over HTTP:
+
+```bash
+python3 -m http.server 8000
+```
+
+Then open http://localhost:8000.
+
+## Architecture
+
+The code follows a layered structure inspired by Clean Architecture: dependencies point inward, and the content never depends on the presentation.
 
 ```
 portfolio/
-├── index.html      → main page (content structure)
-├── style.css       → stylesheet (appearance and responsiveness)
-├── script.js       → interactions (mobile menu, projects, form)
-├── images/         → put your images here (photos, project previews)
-└── README.md       → this file
+├── index.html              Page layout and static sections (hero, contact)
+├── assets/css/theme.css    Brand palette mapped onto Bootstrap variables
+└── src/
+    ├── domain/profile.js   Content: expertise, research, experience, skills...
+    ├── ui/dom.js           Safe DOM helpers (textContent only, no innerHTML)
+    ├── ui/sections.js      Pure renderers: data in, DOM nodes out
+    └── main.js             Composition root: wires content to the page
 ```
 
-## How to use it
+- **Update content**: edit `src/domain/profile.js` only.
+- **Change the look**: edit the renderers in `src/ui/sections.js` or the markup in `index.html`.
+- **Change colors**: edit `assets/css/theme.css`.
 
-1. **Customize the content**
-   - Replace the `[Your Name]` placeholders in `index.html`.
-   - Add your projects to the `projects` array in `script.js`.
+## Security
 
-2. **Add images**
-   - Drop your images into the `images/` folder.
-   - Update the paths in `script.js`
-     (example: `images/project-showcase.jpg`).
-   - The hero does not use an image: its color comes from the CSS.
-
-3. **Open the site**
-   - Simply open `index.html` in a browser.
-   - No server or dependencies are required.
-
-## Features
-
-- Smooth navigation and a responsive menu (mobile / tablet / desktop)
-- Project grid generated dynamically by `script.js`
-- Demo contact form (messages are not actually sent)
-- Automatic year in the footer
-
-## Customizing colors
-
-All colors are defined in the CSS variables at the top of `style.css`:
-
-```css
-:root {
-    --primary-color: #2563eb;
-    --secondary-color: #1e293b;
-    --background: #f8fafc;
-    --text: #334155;
-}
-```
-
-Change these values to update the whole theme at once.
+- Strict Content Security Policy (no inline scripts or styles, `default-src 'none'`).
+- Subresource Integrity on the Bootstrap CDN files.
+- Content is rendered with `textContent`, so it can never be interpreted as HTML.
+- External links use `rel="noopener noreferrer"`.
