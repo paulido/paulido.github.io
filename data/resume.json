@@ -65,6 +65,14 @@
       "endDate": "2017"
     }
   ],
+  "certificates": [
+    {
+      "name": "Foundations of Cybersecurity",
+      "date": "2024-10-28",
+      "issuer": "Google (Coursera)",
+      "url": "https://coursera.org/verify/A23G8FAZ219G"
+    }
+  ],
   "skills": [
     { "name": "Backend", "keywords": ["Laravel", "PHP", "Python"] },
     { "name": "Frontend", "keywords": ["Angular", "Vue.js", "JavaScript"] },

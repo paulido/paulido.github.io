@@ -111,6 +111,35 @@ export function renderEducation(education = []) {
     );
 }
 
+// JSON Resume dates may be partial ("2024", "2024-10"); UTC avoids an
+// off-by-one month when the visitor is west of Greenwich.
+function formatDate(iso) {
+    const [year, month] = iso.split('-').map(Number);
+    if (!month) return String(year);
+
+    return new Date(Date.UTC(year, month - 1)).toLocaleDateString('en-US', {
+        month: 'short',
+        year: 'numeric',
+        timeZone: 'UTC',
+    });
+}
+
+export function renderCertificates(certificates = []) {
+    return certificates.map((certificate) => {
+        const title = certificate.url
+            ? link(certificate.url, 'link-underline-opacity-0 link-underline-opacity-100-hover', certificate.name)
+            : certificate.name;
+
+        return el('li', 'list-group-item bg-transparent px-0 py-3 d-flex flex-column flex-sm-row justify-content-between gap-2', [
+            el('div', '', [
+                el('h3', 'h6 mb-1', title),
+                el('p', 'small text-secondary mb-0', certificate.issuer),
+            ]),
+            el('span', 'small text-secondary text-nowrap', formatDate(certificate.date)),
+        ]);
+    });
+}
+
 export function renderLanguages(languages = []) {
     return languages.map((item) => badge(item.fluency ? `${item.language} · ${item.fluency}` : item.language));
 }

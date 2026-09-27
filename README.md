@@ -37,7 +37,7 @@ portfolio/
 
 | Change | File |
 | --- | --- |
-| Experience, skills, education, languages, contact links, thesis | `data/resume.json` |
+| Experience, skills, education, certifications, languages, contact links, thesis | `data/resume.json` |
 | Hero tagline, "At a glance", section intros, expertise cards | `data/site.json` |
 | Section order or layout | `index.html` |
 | How an item is displayed | `src/ui/sections.js` |

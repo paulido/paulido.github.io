@@ -2,6 +2,7 @@
 import { loadPortfolio } from './data/loader.js';
 import { el, mount } from './ui/dom.js';
 import {
+    renderCertificates,
     renderContact,
     renderEducation,
     renderFocusAreas,
@@ -25,6 +26,7 @@ function render({ resume, site }) {
     mount('experience-list', renderWork(resume.work));
     mount('skill-list', renderSkills(resume.skills));
     mount('education-list', renderEducation(resume.education));
+    mount('certificate-list', renderCertificates(resume.certificates));
     mount('language-list', renderLanguages(resume.languages));
     mount('contact-intro', site.intros.contact);
     mount('contact-links', renderContact(resume.basics));
