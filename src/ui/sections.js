@@ -19,12 +19,25 @@ function profileLinks(profiles = []) {
     return profiles.map((profile) => link(profile.url, OUTLINE_BUTTON, profile.network));
 }
 
+function avatar(basics) {
+    if (!basics.image) return [];
+
+    const image = el('img', 'rounded-circle border border-4 border-light shadow-sm mb-4');
+    image.src = basics.image;
+    image.alt = `Portrait of ${basics.name}`;
+    image.width = 120;
+    image.height = 120;
+
+    return [image];
+}
+
 export function renderHero(basics, hero) {
     const contactButton = el('a', 'btn btn-primary btn-lg px-4', 'Get in touch');
     contactButton.href = '#contact';
 
     return [
-        el('span', 'badge rounded-pill bg-primary bg-opacity-10 text-primary px-3 py-2 mb-4', hero.eyebrow),
+        ...avatar(basics),
+        el('div', '', el('span', 'badge rounded-pill bg-primary bg-opacity-10 text-primary px-3 py-2 mb-4', hero.eyebrow)),
         el('h1', 'display-4 fw-bold mb-3', basics.name),
         el('p', 'fs-4 text-secondary mb-4', hero.tagline),
         el('p', 'text-secondary mb-5', basics.summary),
